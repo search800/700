@@ -3,13 +3,12 @@
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' type='text/javascript'/></script>
-<link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Whatsapp, Phone Location Details</title>
-<meta name="description" content="Get Phone, Whatsapp, Location Details, Social Media Information."><style>
+
 header {background: #ffffff !important;}
 header .button{background: #ffffff !important;}
 a:link {
@@ -23,8 +22,28 @@ p {
 <!-- <meta name="yandex-verification" content="2d766a39aee04780" />
 Global site tag (gtag.js) - Google Analytics -->
 
+<script type='text/javascript'>
+$(document).ready(function() {
+var min = 7000000000;
 
+var max = 7999999999;
+ var text="";
+ text += '<div class="row">';
+ for (i = 1; i < 5000; i++) {
+ var rand = Math.floor(Math.random() * (max - min + 1)) + min;
+text += '<p><a class="col-sm col-md-first col-lg-normal" href="https://search800.github.io/700/mobile-numbers.html?';
+ text += rand;
+ text += '">';
+ text += rand;
+ text += '</a></p> | ';
+ }
+ text +='</div>';
+ $('.sayeed').html(text);
+// document.getElementById('tag-id').innerHTML = text;
+// console.log(text);
+});
 
+</script>
 </head>
 <body>
 <header>

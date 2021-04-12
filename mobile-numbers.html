@@ -3,13 +3,13 @@
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' type='text/javascript'/></script>
-<link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
-<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="manifest" href="site.webmanifest">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Whatsapp, Phone Location Details </title>
-<meta name="description" content="Get Phone, Whatsapp, Location Details, Social Media Information.">
+
 <style>
 a:link {
   padding: 6px 6px 6px 6px;
@@ -75,6 +75,15 @@ $(document).ready(function() {
 	var pageURL = window.location.href;
 var lastURLSegment = pageURL.substr(pageURL.lastIndexOf('?') + 1);
 document.title =  "Whatsapp, Location Details of " + lastURLSegment + "";
+
+$('.number').html(lastURLSegment);
+var meta=document.createElement('meta');
+meta.name='description';
+
+meta.setAttribute('content', 'Get Whatsapp Profile, Location, Details of the number ' + lastURLSegment + ', Get info about social media profile, status of ' + lastURLSegment + ' and mobile number details');
+
+document.getElementsByTagName('head')[0].appendChild(meta);
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -152,7 +161,9 @@ text2 += '<span class="close">x</span><p>2 Results Found, Select the desired cou
  $('.modal-content').html(text2);*/
  
  
-/*
+ 
+ /*
+ ///////////////////////////////////////
 // in order to work 'Math.seed' must NOT be undefined,
 // so in any case, you HAVE to provide a Math.seed
 Math.seededRandom = function(max, min) {
@@ -166,7 +177,6 @@ Math.seededRandom = function(max, min) {
 var text="";
 var last2 = 100000;
 var numm = Number(lastURLSegment);
-	var lastURLSegment = Number(lastURLSegment);
 
 var last = numm + last2;
 console.log(typeof(numm));
@@ -176,8 +186,7 @@ var i;
 for (i = 0; i < 1000; i++) {
 
   var res = Math.seededRandom(7999999999,7000000000);
-  var mather = lastURLSegment *632514;
-  Math.seed = mather*i;
+  Math.seed = numm*i;
   var res = Number(res);
   //alert(typeof(bar));
 
@@ -210,18 +219,16 @@ text += res;
  text +='</div>';
  //////////////////////////
  */
-	
-var min = 7000000000;
+ 
+ var min = 7000000000;
 
-var max = 7999999999;	
-	
+var max = 7999999999;
 var text="";
  text += '<div class="row">';
  for (i = 1; i < 5000; i++) {
  var rand = Math.floor(Math.random() * (max - min + 1)) + min;
- var strFirstThree = String(rand).substring(0,3); 
-text += '<p><a class="col-sm col-md-first col-lg-normal" href="https://who-called-'+strFirstThree+'.blogspot.com/p/whatsapp-location-details.html?';
- text += rand;
+  var strFirstThree = String(rand).substring(0,3); 
+text += '<p><a class="col-sm col-md-first col-lg-normal" href="https://who-called-'+strFirstThree+'.blogspot.com/p/whatsapp-location-details.html?'; text += rand;
  text += '">';
  text += rand;
  text += '</a></p> | ';
@@ -229,7 +236,7 @@ text += '<p><a class="col-sm col-md-first col-lg-normal" href="https://who-calle
  text +='</div>';
  $('.sayeed').html(text);
 // document.getElementById('tag-id').innerHTML = text;
- //console.log(text);
+// console.log(text);
 });
 
 </script>
@@ -242,11 +249,8 @@ text += '<p><a class="col-sm col-md-first col-lg-normal" href="https://who-calle
   <a href="#" class="logo">Search</a>
 
   </header>
-<h1>Whatsapp, Location, Email of <?php echo $mobile?></h1>
-<div class="row"><p>Get the Name, Phone, Whatsapp, Location, Email, Website, Social Media Information of mobile number: <?php echo $mobile;?> /&nbsp;+1 <?php
- echo $formatted_number;
-
-?></p></div>
+<h1>Whatsapp, Location, Email of  <div class= "number"></div></h1>
+<div class="row"><p>Get the Name, Phone, Whatsapp, Location, Email, Website, Social Media Information of mobile number:  <div class= "number"></div> /&nbsp;+1  <div class= "number"></div></p></div>
 <div class="row">
   <div class="col-sm-2"></div>
   <div class="col-sm">
@@ -254,9 +258,9 @@ text += '<p><a class="col-sm col-md-first col-lg-normal" href="https://who-calle
 	</div>
 	  <div class="col-sm-2"></div>
   </div>
-<h4>Send Whatsapp Message directly to <?php echo $mobile?>
+<h4>Send Whatsapp Message directly to <div class= "number"></div>
 </h4>
- <!-- <div class="row"> <div class="col-sm-2"><img src="favicon/whatsapp-location.png" alt="Whatsapp, Location of <?php echo $mobile?>"/></div> -->
+ <!-- <div class="row"> <div class="col-sm-2"><img src="whatsapp-location.png" alt="Whatsapp, Location of <div class= "number"></div>"/></div> -->
 <div class="sayeed"></div>
 
 
@@ -267,12 +271,12 @@ text += '<p><a class="col-sm col-md-first col-lg-normal" href="https://who-calle
   <!--Modal content-->
   <div class="modal-content">
     <span class="close">x</span>
-    <p>2 Results Found, Select the desired country to proceed</p>
+    <p>2 Results Found, Select the desired country to proceedss</p>
 	   
-  <div class="item2"><a href ="https://ww3.s-earch.com/p/whatsapp-location-details.html?9849160782" > <button class="w3-button w3-black" style="height: 50px; inline-size: auto; width: 100%;">+1 (USA)</button></a></div>
+  <div class="item2"><a href ="https://www.google.com/search?q=-7852457852++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++site%3Aww7.kno-w.com"> <button class="w3-button w3-black" style="height: 50px; inline-size: auto; width: 100%;">+1 (USA)</button></a></div>
     <p></p>
      <div class="item">
-<a href ="https://ww7.weloveellen.com/p/truecaller-social-media-details.html?7849160782" ><button class="w3-button w3-teal" style="height: 50px; inline-size: auto; width: 100%;">+91 (India)</button></a></div>
+<a href ="https://www.google.com/search?q=-7852457852+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++site%3Aww7.weloveellen.com" ><button class="w3-button w3-teal" style="height: 50px; inline-size: auto; width: 100%;">+91 (India)</button></a></div>
 
    <br> <p style="float: right;">Click Esc to Exit</p>   
   </div>
