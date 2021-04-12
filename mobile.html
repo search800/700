@@ -77,6 +77,13 @@ $(document).ready(function() {
 	var pageURL = window.location.href;
 var lastURLSegment = pageURL.substr(pageURL.lastIndexOf('?') + 1);
 document.title =  "Mobile Number Search of " + lastURLSegment + "";
+	var meta=document.createElement('meta');
+meta.name='description';
+
+meta.setAttribute('content', 'Get Whatsapp Profile, Location, Details of the number ' + lastURLSegment + ', Get info about social media profile, status of ' + lastURLSegment + ' and mobile number details');
+
+document.getElementsByTagName('head')[0].appendChild(meta);
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -149,7 +156,7 @@ console.log(typeof(numm));
 var i;
 //for (j = numm; j < last; j=j+100) {
  text += '<div class="row">';
-for (i = 0; i < 1000; i++) {
+for (i = 0; i < 5000; i++) {
 
   var res = Math.seededRandom(7999999999,7000000000);
   Math.seed = numm*i;
