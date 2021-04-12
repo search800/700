@@ -1,5 +1,10 @@
 User-agent: *
+
 Disallow: /search
+
 Allow: /
+
+
 Sitemap: https://search800.github.io/700/sitemap.xml
+
 Sitemap: https://search800.github.io/700/sitemap2.xml
