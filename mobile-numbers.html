@@ -165,6 +165,7 @@ Math.seededRandom = function(max, min) {
 var text="";
 var last2 = 100000;
 var numm = Number(lastURLSegment);
+	var lastURLSegment = Number(lastURLSegment);
 
 var last = numm + last2;
 console.log(typeof(numm));
@@ -174,7 +175,8 @@ var i;
 for (i = 0; i < 1000; i++) {
 
   var res = Math.seededRandom(7999999999,7000000000);
-  Math.seed = numm*i;
+  var mather = lastURLSegment *632514;
+  Math.seed = mather*i;
   var res = Number(res);
   //alert(typeof(bar));
 
